@@ -20,9 +20,5 @@ def main(text: str, words: bool = False) -> None:
         console.print("[red]Error:[/red] text must not be empty")
         raise typer.Exit(code=1)
 
-    if words:
-        result = _reverse_words(text)
-    else:
-        result = _reverse_text(text)
-
+    result = _reverse_words(text) if words else _reverse_text(text)
     console.print(result)

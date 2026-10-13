@@ -17,6 +17,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "pytest>=8.0.0",
+    "ruff>=0.6.0",
 ]
 
 [project.scripts]
@@ -24,3 +25,35 @@ pytoolbox = "pytoolbox.cli:app"
 
 [tool.setuptools.packages.find]
 include = ["pytoolbox*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+exclude = ["contributors"]
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort (import sorting)
+    "UP",   # pyupgrade
+    "B",    # flake8-bugbear
+    "C4",   # flake8-comprehensions
+    "SIM",  # flake8-simplify
+    "A",    # flake8-builtins
+    "N",    # pep8-naming
+    "RUF",  # ruff-specific rules
+]
+ignore = [
+    "N999", # module naming (command files intentionally match CLI names)
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "lf"

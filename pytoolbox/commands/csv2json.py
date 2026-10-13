@@ -17,7 +17,7 @@ def _read_rows(path: Path) -> tuple[list[str], list[dict]]:
         headers = next(reader)
         next(reader)
 
-        rows = [dict(zip(headers, row)) for row in reader]
+        rows = [dict(zip(headers, row, strict=False)) for row in reader]
 
     return headers, rows
 

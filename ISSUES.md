@@ -1010,36 +1010,7 @@ rather than creating a second command.
 
 ---
 
-## #27 — Add `ruff` linting to CI
-
-**Labels:** `add-on`, `beginner`
-
-**Description**
-
-Add `ruff` as a dev dependency and run it in CI so style/lint issues are
-caught automatically on every PR.
-
-**Files likely to change**
-
-- `requirements.txt`
-- `pyproject.toml`
-- `.github/workflows/ci.yml`
-
-**Acceptance criteria**
-
-- [ ] `ruff` is added as a dev dependency
-- [ ] A reasonable `ruff` configuration is added to `pyproject.toml`
-- [ ] CI runs `ruff check .` and fails the build on lint errors
-- [ ] The existing codebase passes (or lint config is adjusted sensibly)
-
-**Hint**
-
-Start with ruff's default rule set before adding stricter rules — a wall of
-unrelated lint errors on day one isn't the goal.
-
----
-
-## #28 — Add test coverage reporting with `pytest-cov`
+## #27 — Add test coverage reporting with `pytest-cov`
 
 **Labels:** `add-on`, `beginner`
 
@@ -1065,7 +1036,7 @@ and show a coverage summary in CI.
 
 ---
 
-## #29 — Add a CI matrix for multiple Python versions and OSes
+## #28 — Add a CI matrix for multiple Python versions and OSes
 
 **Labels:** `add-on`, `intermediate`
 
@@ -1093,7 +1064,7 @@ GitHub Actions' `strategy.matrix` is designed exactly for this; `os` and
 
 ---
 
-## #30 — Improve the README with a GIF/screenshot section and commands table
+## #29 — Improve the README with a GIF/screenshot section and commands table
 
 **Labels:** `add-on`, `good first issue`
 
@@ -1122,7 +1093,7 @@ and instructions are enough for this issue.
 
 ---
 
-## #31 — Friendly error messages for missing files
+## #30 — Friendly error messages for missing files
 
 **Labels:** `add-on`, `intermediate`
 

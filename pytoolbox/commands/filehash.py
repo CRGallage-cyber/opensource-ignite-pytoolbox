@@ -13,7 +13,7 @@ SUPPORTED_ALGORITHMS = ("sha256", "md5", "sha1")
 
 
 def _read_content(path: Path) -> str:
-    with open(path, "r") as f:
+    with open(path) as f:
         return f.read()
 
 

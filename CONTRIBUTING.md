@@ -213,3 +213,15 @@ real issue.
 - Prefer `pathlib.Path` over raw string paths.
 - No shell-specific code — this project must run identically on Windows,
   macOS, and Linux.
+- This project uses [`ruff`](https://docs.astral.sh/ruff/) for both linting
+  and formatting, enforced in CI. Before opening a PR, run:
+
+  ```bash
+  ruff check .
+  ruff format pytoolbox tests scripts
+  ```
+
+  `ruff check .` must report no errors, and `ruff format` should leave your
+  changed files unmodified (CI runs `ruff format --check` and will fail the
+  build if formatting is off). If `ruff format` rewrites a file, just
+  re-stage it and commit the formatted version.

@@ -101,6 +101,19 @@ pointing at the relevant issue number. That keeps CI green on `main` while
 still documenting, in code, exactly what "fixed" looks like. See
 [CONTRIBUTING.md](CONTRIBUTING.md) for how to work with these tests.
 
+## Linting and formatting
+
+This project enforces [`ruff`](https://docs.astral.sh/ruff/) in CI, for both
+linting and strict code formatting. Before opening a PR, run:
+
+```bash
+ruff check .
+ruff format pytoolbox tests scripts
+```
+
+CI runs `ruff check .` and `ruff format --check` and will fail the build if
+either reports a problem.
+
 ## Contributing
 
 Never sent an open-source pull request before? Start with
