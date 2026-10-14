@@ -1,5 +1,10 @@
 # pytoolbox
 
+> **⚠️ SANDBOX REPOSITORY — NOT A REAL PROJECT ⚠️**
+> This repo was created as a practice sandbox for the **OpenSource Ignite** program.
+> It is not an actual open-source project, and it is not looking for contributions from the general public.
+> **Only participants of the OpenSource Ignite program are encouraged to open a PR or contribute.**
+
 A small, plugin-based command-line toolbox, built as a hands-on sandbox for
 learning how open-source projects actually work: forking, branching, writing
 tests, and sending pull requests.
